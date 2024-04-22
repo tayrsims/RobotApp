@@ -1,5 +1,6 @@
 package com.example.robotapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
                 // Dummy validation, replace it with your actual validation logic
                 if (usernameText.equals("admin") && passwordText.equals("password")) {
-                    // Login successful, show a toast or navigate to another activity
-                    Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                    // Login successful, navigate to another activity
+                    Intent intent = new Intent(MainActivity.this, HomeScreen.class);
+                    startActivity(intent);
                 } else {
                     // Login failed, show a toast or handle it accordingly
                     Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
