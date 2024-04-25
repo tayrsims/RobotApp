@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -15,6 +17,11 @@ public class HomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        ImageButton forwardButton = findViewById(R.id.forwardBtn);
+        ImageButton leftButton = findViewById(R.id.leftBtn);
+        ImageButton rightButton = findViewById(R.id.rightBtn);
+        ImageButton reverseButton = findViewById(R.id.reverseBtn);
 
         Button settingsButton = findViewById(R.id.settingsButton);
         Button homeButton = findViewById(R.id.homeButton);
