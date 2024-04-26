@@ -47,7 +47,7 @@ public class UpdateData extends AppCompatActivity {
                 num = update_num.getText().toString().trim();
                 name = update_name.getText().toString().trim();
                 data = update_data.getText().toString().trim();
-                RoboDB.updateData(id, num, name, data);
+                RoboDB.updateData(id, Integer.parseInt(num), name, data);
             }
         });
         delete_button.setOnClickListener(new View.OnClickListener() {
